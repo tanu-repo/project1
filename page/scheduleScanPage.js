@@ -6,21 +6,16 @@ export class ScheduleScanPage {
     async selectState(page, stateName) {
         await page.waitForTimeout(2000);
         await this.page.getByRole('combobox').getByRole('img').click();
-
-        await this.page.locator("//div[@role='combobox']//li//span[text()='California']").click();
+        await this.page.locator(`//div[@role='combobox']//li//span[text()='${stateName}']`).click();
 
     }
     async selectIrvineLocation(page, locationName) {
 
         await page.locator(`//div[@class='location-cards']//p[text()='${locationName}']`).first().click();
 
-
     }
 
-
     async selectActiveDate(page, dayNumber, month) {
-        // await page.locator(`//span[@role='button' and @class='vc-day-content']//div[text()='${dayNumber}']`).first().click();
-
         await page.getByTestId(`${month}-${dayNumber}-cal-day-content`).click();
         await page.locator("//div[@class='appointments__individual-appointment']//label[contains(@for,'Time')]").first().click();
         await page.getByRole('button', { name: 'I understand' }).click();
