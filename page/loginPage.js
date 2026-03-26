@@ -4,10 +4,10 @@ export class LoginPage {
     }
 
     async navigateToLogin() {
-        // const loginPath = process.env.LOGIN_PATH;
 
         // Combine baseURL + path
-        await this.page.goto(`${process.env.BASE_URL_STAGING}${process.env.LOGIN_PATH_STAGING}`);
+        await this.page.goto(`${process.env.BASE_URL}${process.env.LOGIN_PATH_STAGING}`);
+
     }
 
     async login(email, password, expectSuccess = true) {
