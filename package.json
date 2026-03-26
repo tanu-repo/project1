@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "test:e2e": "TEST_ENV=stage npx playwright test",
+    "test:login": "TEST_ENV=stage npx playwright test tests/login.spec.js",
+    "test:booking": "TEST_ENV=stage npx playwright test tests/booking.spec.js",
+    "report": "npx playwright show-report"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tanu-repo/project1.git"
@@ -11,7 +17,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/tanu-repo/project1/issues"
   },

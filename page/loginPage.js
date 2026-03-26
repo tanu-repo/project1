@@ -9,10 +9,18 @@ export class LoginPage {
         await this.page.goto(`${process.env.BASE_URL}${process.env.LOGIN_PATH_STAGING}`);
 
     }
+    // Accept cookies if the prompt appears
+    async acceptCookiesIfPresent() {
+    const acceptBtn = this.page.getByRole('button', { name: /accept/i });
+
+    if (await acceptBtn.isVisible().catch(() => false)) {
+        await acceptBtn.click();
+    }
+}
 
     async login(email, password, expectSuccess = true) {
         // Accept cookies if the prompt appears
-        await this.page.getByRole('button', { name: 'Accept' }).click();
+        // await this.page.getByRole('button', { name: 'Accept' }).click();
         await this.page.locator('#email').fill(email);
         await this.page.locator('#password').fill(password);
         await this.page.getByRole('button', { name: 'Submit' }).click();

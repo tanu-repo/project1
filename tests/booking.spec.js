@@ -9,6 +9,7 @@ test.describe('Login Tests', () => {
 
     test.beforeEach(async ({ page }) => {
         const login = new LoginPage(page);
+        login.acceptCookiesIfPresent();
         const result = await login.loginToApplication(true);
         expect(result).toBe(true);
         console.log('Login successful, Home link is visible');
