@@ -14,10 +14,10 @@ node and npm need to be installed
 
 
 ### Installing
-git clone https://github.com/tanu-repo/project1.git
-cd project1
-npm install
-install playwright browser -npx playwright install
+git clone https://github.com/tanu-repo/project1.git<br>
+cd project1<br>
+npm install<br>
+install playwright browser -npx playwright install<br>
 
 ### Executing program
 
