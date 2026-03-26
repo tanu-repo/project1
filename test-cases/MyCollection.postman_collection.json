@@ -1,0 +1,727 @@
+{
+  "info": {
+    "_postman_id": "d3ff2cb2-3869-4b1f-a322-fee7bbedf6cf",
+    "name": "My Collection",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53531303",
+    "_collection_link": "https://go.postman.co/collection/53531303-d3ff2cb2-3869-4b1f-a322-fee7bbedf6cf?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "postman-echo.com/get",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Post data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "postman-echo.com/post",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "post"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Medical Questionnaire",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "disabled": false
+          },
+          {
+            "key": "accept-encoding",
+            "value": "gzip, deflate, br, zstd",
+            "disabled": false
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9,ja;q=0.8",
+            "disabled": false
+          },
+          {
+            "key": "cache-control",
+            "value": "max-age=0",
+            "disabled": false
+          },
+          {
+            "key": "cookie",
+            "value": "csrf_token=55613362-0c36-4872-9f4c-9f1e15157658; g_state={\"i_l\":0,\"i_ll\":1774550452438,\"i_b\":\"rl2TLsBvp1y1XUob9xvM5ViPceJFIbA7Q2mllCkDCtE\",\"i_e\":{\"enable_itp_optimization\":0}}; mp_fd238d10-c4a8-4b7b-b647-3737d3cd3c31_perfalytics=eJyVUstuHCEQ%2FBVr5JuDxfuRky%2B5%2BhdGPJpdZC%2BzGZjNwZp%2FDxDFk1hWpHBpaKqri2repvk0fb2bIDBqIoso6CARF1IgQ4CjEKXmTthAopy%2BTHPsYGICdVJHoOANQVhLJVTgQQXGQSMqsSRREESkxhijAx6joZ0FOgs1mhPFqHokSnHBjTK8XaYyp1xhzfa1o3DH57YbIIG5VpqKlgt%2FKWEygkTYOMaoxZwxL9g%2FlDAVSW82f28sdd2gbdfepMVbi2%2BTr%2BuIc4Ecvt0g13bUeN8bYjmKbFdxH9IKvnY%2B9%2BHs31Wq1lNRghnC0QOAFIC90vJzkQPNrBsir0e%2F8qcTVGPVci9DKFxsGo61qWy2lmpPKZ%2BeynU550e%2FNJ6Y1lKf7WW4vxVYSUu%2B2iPXa6Dlruclw%2FN2cdA9mB7IHccaSa0RaWtqFtz38jmF%2F%2Fk6dch0EIkULiCOhUbcMYEc8xEJhT1tY2Ta%2BAEcaudrU3RL8GM%2B2zIv3m%2FrCuHdjg%2BYlNu0SklL%2Fhz%2B%2B9Iv2xgn%2BfX8g6CmYcTx1aQx%2B77%2FBKeF42g%3D",
+            "disabled": false
+          },
+          {
+            "key": "priority",
+            "value": "u=0, i",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "document",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "navigate",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-origin",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-user",
+            "value": "?1",
+            "disabled": false
+          },
+          {
+            "key": "upgrade-insecure-requests",
+            "value": "1",
+            "disabled": false
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+            "disabled": false
+          }
+        ],
+        "url": {
+          "raw": "https://myezra-staging.ezra.com/medical-questionnaire?direct=true&clearData=true&extraData=%7B%22encounterId%22%3A%22234a2b75-0c7a-4e22-929e-928687a18c32%22%7D",
+          "protocol": "https",
+          "host": [
+            "myezra-staging",
+            "ezra",
+            "com"
+          ],
+          "path": [
+            "medical-questionnaire"
+          ],
+          "query": [
+            {
+              "key": "direct",
+              "value": "true"
+            },
+            {
+              "key": "clearData",
+              "value": "true"
+            },
+            {
+              "key": "extraData",
+              "value": "%7B%22encounterId%22%3A%22234a2b75-0c7a-4e22-929e-928687a18c32%22%7D"
+            }
+          ]
+        },
+        "description": "This is a GET request to retrieve medical questionnaire data. It includes query parameters for direct access, data clearing, and an encounter ID in the extraData parameter."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Member Information",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{bearerToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json, text/plain, */*",
+            "disabled": false
+          },
+          {
+            "key": "accept-encoding",
+            "value": "gzip, deflate, br, zstd",
+            "disabled": false
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9,ja;q=0.8",
+            "disabled": false
+          },
+          {
+            "key": "origin",
+            "value": "https://myezra-staging.ezra.com",
+            "disabled": false
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i",
+            "disabled": false
+          },
+          {
+            "key": "referer",
+            "value": "https://myezra-staging.ezra.com/",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-site",
+            "disabled": false
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+            "disabled": false
+          }
+        ],
+        "url": {
+          "raw": "https://stage-api.ezra.com/individuals/api/members",
+          "protocol": "https",
+          "host": [
+            "stage-api",
+            "ezra",
+            "com"
+          ],
+          "path": [
+            "individuals",
+            "api",
+            "members"
+          ]
+        },
+        "description": "GET request to retrieve member information from the Ezra staging API. Requires a valid Bearer token stored in the {{bearerToken}} environment variable."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Bearer Token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var jsonData = pm.response.json();",
+              "pm.environment.set(\"bearerToken\", jsonData.access_token);",
+              "pm.test(\"Token retrieved successfully\", function () {",
+              "    pm.response.to.have.status(200);",
+              "    pm.expect(jsonData.access_token).to.be.a('string');",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json",
+            "disabled": false
+          },
+          {
+            "key": "accept-encoding",
+            "value": "gzip, deflate, br, zstd",
+            "disabled": false
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9,ja;q=0.8",
+            "disabled": false
+          },
+          {
+            "key": "origin",
+            "value": "https://myezra-staging.ezra.com",
+            "disabled": false
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i",
+            "disabled": false
+          },
+          {
+            "key": "referer",
+            "value": "https://myezra-staging.ezra.com/",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-site",
+            "disabled": false
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "grant_type",
+              "value": "password",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "{{username}}",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "text"
+            },
+            {
+              "key": "client_id",
+              "value": "{{client_id}}",
+              "type": "text"
+            },
+            {
+              "key": "scope",
+              "value": "openid offline_access profile roles email",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://stage-api.ezra.com/individuals/member/connect/token",
+          "protocol": "https",
+          "host": [
+            "stage-api",
+            "ezra",
+            "com"
+          ],
+          "path": [
+            "individuals",
+            "member",
+            "connect",
+            "token"
+          ]
+        },
+        "description": "POST request to authenticate and retrieve a Bearer token from the Ezra staging API. Uses x-www-form-urlencoded body with credentials stored in environment variables ({{username}}, {{password}}, {{client_id}}). On success, automatically saves the access_token to the {{bearerToken}} environment variable for use in subsequent requests."
+      },
+      "response": []
+    },
+    {
+      "name": "Check Identification",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json, text/plain, */*",
+            "disabled": false
+          },
+          {
+            "key": "accept-encoding",
+            "value": "gzip, deflate, br, zstd",
+            "disabled": false
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9,ja;q=0.8",
+            "disabled": false
+          },
+          {
+            "key": "origin",
+            "value": "https://myezra-staging.ezra.com",
+            "disabled": false
+          },
+          {
+            "key": "referer",
+            "value": "https://myezra-staging.ezra.com/",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-site",
+            "disabled": false
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+            "disabled": false
+          },
+          {
+            "key": "authorization",
+            "value": "Bearer {{bearerToken}}",
+            "disabled": false
+          }
+        ],
+        "url": {
+          "raw": "https://stage-api.ezra.com/diagnostics/api/medicalfiles/identification",
+          "protocol": "https",
+          "host": [
+            "stage-api",
+            "ezra",
+            "com"
+          ],
+          "path": [
+            "diagnostics",
+            "api",
+            "medicalfiles",
+            "identification"
+          ]
+        },
+        "description": "GET request to check medical file identification. Returns true if the user is identified. Part of the medical questionnaire security test flow."
+      },
+      "response": []
+    },
+    {
+      "name": "Get MQ Submission Detail",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = pm.response.json();",
+              "if (jsonData.mqSubmissions && jsonData.mqSubmissions.length > 0) {",
+              "    pm.environment.set(\"submissionId\", jsonData.mqSubmissions[0].id);",
+              "    console.log(\"Saved submissionId: \" + jsonData.mqSubmissions[0].id);",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json, text/plain, */*",
+            "disabled": false
+          },
+          {
+            "key": "accept-encoding",
+            "value": "gzip, deflate, br, zstd",
+            "disabled": false
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9,ja;q=0.8",
+            "disabled": false
+          },
+          {
+            "key": "origin",
+            "value": "https://myezra-staging.ezra.com",
+            "disabled": false
+          },
+          {
+            "key": "referer",
+            "value": "https://myezra-staging.ezra.com/",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-site",
+            "disabled": false
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+            "disabled": false
+          },
+          {
+            "key": "authorization",
+            "value": "Bearer {{bearerToken}}",
+            "disabled": false
+          }
+        ],
+        "url": {
+          "raw": "https://stage-api.ezra.com/diagnostics/api/medicaldata/forms/mq/submissions/{{encounterId}}/detail",
+          "protocol": "https",
+          "host": [
+            "stage-api",
+            "ezra",
+            "com"
+          ],
+          "path": [
+            "diagnostics",
+            "api",
+            "medicaldata",
+            "forms",
+            "mq",
+            "submissions",
+            "{{encounterId}}",
+            "detail"
+          ]
+        },
+        "description": "GET request to retrieve MQ submission detail by encounter ID. Automatically saves the submission ID to {{submissionId}} environment variable for use in the next request. Change {{encounterId}} to test with a different user's encounter ID."
+      },
+      "response": []
+    },
+    {
+      "name": "Get MQ Submission Data",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json, text/plain, */*",
+            "disabled": false
+          },
+          {
+            "key": "accept-encoding",
+            "value": "gzip, deflate, br, zstd",
+            "disabled": false
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9,ja;q=0.8",
+            "disabled": false
+          },
+          {
+            "key": "origin",
+            "value": "https://myezra-staging.ezra.com",
+            "disabled": false
+          },
+          {
+            "key": "referer",
+            "value": "https://myezra-staging.ezra.com/",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0",
+            "disabled": false
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\"",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors",
+            "disabled": false
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-site",
+            "disabled": false
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+            "disabled": false
+          },
+          {
+            "key": "authorization",
+            "value": "Bearer {{bearerToken}}",
+            "disabled": false
+          }
+        ],
+        "url": {
+          "raw": "https://stage-api.ezra.com/diagnostics/api/medicaldata/forms/mq/submissions/{{submissionId}}/data",
+          "protocol": "https",
+          "host": [
+            "stage-api",
+            "ezra",
+            "com"
+          ],
+          "path": [
+            "diagnostics",
+            "api",
+            "medicaldata",
+            "forms",
+            "mq",
+            "submissions",
+            "{{submissionId}}",
+            "data"
+          ]
+        },
+        "description": "GET request to retrieve full MQ submission data by submission ID. The {{submissionId}} is automatically populated by the 'Get MQ Submission Detail' request. This is the final step in the security test flow — if the API is secure, using another user's encounter ID should result in a 403 or similar error here."
+      },
+      "response": []
+    }
+  ]
+}
