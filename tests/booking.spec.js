@@ -29,9 +29,9 @@ test.describe('Login Tests', () => {
         await selectPlanPage.clickContinue();
         await scheduleScanPage.selectState(page, 'California');
         console.log('California selected successfully!');
-        await scheduleScanPage.selectIrvineLocation('North Irvine');
+        await scheduleScanPage.selectIrvineLocation(page, 'North Irvine');
         console.log('Irvine location selected successfully!');
-        await scheduleScanPage.selectActiveDate(3, 4);
+        await scheduleScanPage.selectActiveDate(page, 10, 4);
         console.log('Date selected successfully!');
         await scheduleScanPage.addCard(page);
         console.log('Card details added successfully!');
