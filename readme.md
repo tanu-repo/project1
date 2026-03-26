@@ -10,7 +10,7 @@ This is a basic framework developed using Playwright
 
 ### Dependencies
 
-node and npm needs to be installed
+node and npm need to be installed
 
 
 ### Installing
