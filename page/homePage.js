@@ -1,10 +1,11 @@
 export class HomePage {
     constructor(page) {
         this.page = page;
+        this.bookAScanButton = page.getByRole('button', { name: 'Book a scan' });
 
     }
     async startBookingProcess() {
-        await this.page.getByRole('button', { name: 'Book a scan' }).click();
+        await this.bookAScanButton.click();
 
     }
 

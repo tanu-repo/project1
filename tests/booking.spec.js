@@ -29,16 +29,13 @@ test.describe('Login Tests', () => {
         await selectPlanPage.clickContinue();
         await scheduleScanPage.selectState(page, 'California');
         console.log('California selected successfully!');
-        await scheduleScanPage.selectIrvineLocation(page, 'North Irvine');
+        await scheduleScanPage.selectIrvineLocation('North Irvine');
         console.log('Irvine location selected successfully!');
-        await scheduleScanPage.selectActiveDate(page, 29, 4);
+        await scheduleScanPage.selectActiveDate(3, 4);
         console.log('Date selected successfully!');
         await scheduleScanPage.addCard(page);
         console.log('Card details added successfully!');
         await selectPlanPage.clickContinue();
-
-
-
         await expect(page.getByRole('button', { name: 'Begin Medical Questionnaire' })).toBeVisible({ timeout: 10000 });
 
 

@@ -1,6 +1,30 @@
 export class LoginPage {
     constructor(page) {
         this.page = page;
+        this.emailInput = page.locator('#email');
+        this.passwordInput = page.locator('#password');
+        this.submitButton = page.getByRole('button', { name: 'Submit' });
+        this.joinInput = page.getByRole('link', { name: 'Join' });
+        this.legalFirstNameInput = page.getByRole('textbox', { name: 'Legal First Name' });
+        this.legalLastNameInput = page.getByRole('textbox', { name: 'Legal Last Name' });
+        this.emailJoinInput = page.getByRole('textbox', { name: 'Email' });
+        this.phoneJoinInput = page.getByRole('textbox', { name: 'Phone Number' });
+        this.passwordJoinInput = page.getByRole('textbox', { name: 'Password' });
+        this.ezraAgreementCheckbox = page.getByRole('button', { name: 'I agree to Ezra\'s terms of' });
+        this.submitJoinButton = page.getByRole('button', { name: 'Submit' });
+        this.signOutButton = page.getByRole('button', { name: 'Sign out' });
+    }
+
+    async createNewUser() {
+        await this.joinInput.click();
+        await this.legalFirstNameInput.fill(await this.generateRandomName());
+        await this.legalLastNameInput.fill(await this.generateRandomName());
+        await this.emailJoinInput.fill(await this.generateRobustEmail());
+        await this.phoneJoinInput.fill(await this.generateUSPhone());
+        await this.passwordJoinInput.fill(process.env.E2E_STAGING_TESTING_PASSWORD);
+        await this.ezraAgreementCheckbox.click();
+        await this.submitJoinButton.click();
+
     }
 
     async navigateToLogin() {
@@ -11,19 +35,18 @@ export class LoginPage {
     }
     // Accept cookies if the prompt appears
     async acceptCookiesIfPresent() {
-    const acceptBtn = this.page.getByRole('button', { name: /accept/i });
+        const acceptBtn = this.page.getByRole('button', { name: /accept/i });
 
-    if (await acceptBtn.isVisible().catch(() => false)) {
-        await acceptBtn.click();
+        if (await acceptBtn.isVisible().catch(() => false)) {
+            await acceptBtn.click();
+        }
     }
-}
 
     async login(email, password, expectSuccess = true) {
-        // Accept cookies if the prompt appears
-        // await this.page.getByRole('button', { name: 'Accept' }).click();
-        await this.page.locator('#email').fill(email);
-        await this.page.locator('#password').fill(password);
-        await this.page.getByRole('button', { name: 'Submit' }).click();
+
+        await this.emailInput.fill(email);
+        await this.passwordInput.fill(password);
+        await this.submitButton.click();
 
         if (expectSuccess) {
             // Positive test: wait for Home link to appear
@@ -46,20 +69,9 @@ export class LoginPage {
     }
 
     async logoutFromApplication(expectSuccess = true) {
-        await this.page.getByRole('button', { name: 'Sign out' }).click();
-
+        await this.signOutButton.click();
     }
 
-    async createNewUser() {
-        await this.page.getByRole('link', { name: 'Join' }).click();
-        await this.page.getByRole('textbox', { name: 'Legal First Name' }).fill(await this.generateRandomName());
-        await this.page.getByRole('textbox', { name: 'Legal Last Name' }).fill(await this.generateRandomName());
-        await this.page.getByRole('textbox', { name: 'Email' }).fill(await this.generateRobustEmail());
-        await this.page.getByRole('textbox', { name: 'Phone Number' }).fill(await this.generateUSPhone());
-        await this.page.getByRole('textbox', { name: 'Password' }).fill(process.env.E2E_STAGING_TESTING_PASSWORD);
-        await this.page.getByRole('button', { name: 'I agree to Ezra\'s terms of' }).click();
-        await this.page.getByRole('button', { name: 'Submit' }).click();
-    }
     async generateRobustEmail(prefix = "testuser", domain = "spohn.co") {
         const random = Math.random().toString(36).substring(2, 6);
         const timestamp = Date.now();
