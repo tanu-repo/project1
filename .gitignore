@@ -10,3 +10,10 @@ node_modules/
  # Mac files
 .DS_Store
 
+# Local env files (do not commit credentials)
+.env
+config/env/*.env
+
+# Playwright artifacts
+.playwright/
+
