@@ -1,0 +1,31 @@
+Required qualifications, capabilities, and skills
+
+ 
+
+Formal training or certification in software engineering concepts with 3+ years of applied experience
+Hands on experience designing and implementing test automation frameworks for complex, distributed applications
+Proficiency in UI test automation using tools such as Cypress, Playwright, or Selenium WebDriver, with specific experience testing React-based applications
+Experience with API test automation using tools such as REST Assured, Postman/Newman, Karate, or similar frameworks for testing Java/Spring Boot services
+Solid programming skills in JavaScript/TypeScript and/or Java for developing and maintaining test automation code
+Experience testing microfrontend architectures, including module federation, independent deployment validation, and cross-microfrontend integration scenarios
+Understanding of Backend for Frontend (BFF) patterns and experience validating data aggregation, transformation, and orchestration logic
+Proven experience with integration testing strategies for applications with multiple internal and external system dependencies, including message queues, third-party APIs, and legacy systems
+Hands-on experience with contract testing tools such as Pact or Spring Cloud Contract to validate API contracts between services
+Solid understanding of CI/CD pipelines and experience integrating automated tests into build and deployment workflows (Jenkins, GitHub Actions, AWS CodePipeline)
+Strong knowledge of the Software Development Life Cycle (SDLC) and agile methodologies, including test-driven development (TDD) and behavior-driven development (BDD)
+ 
+ 
+
+Preferred qualifications, capabilities, and skills
+
+ 
+
+Experience with AI-powered testing tools such as GitHub Copilot, Claude Code, or similar coding assistants to accelerate test development and maintenance
+Familiarity with AI-driven test generation, self-healing tests, or intelligent test analytics platforms (e.g., Testim, Mabl, Applitools)
+Exposure to AWS services relevant to testing and deployment (CloudWatch, X-Ray, ECS, Lambda, API Gateway)
+Experience with service virtualization and mocking frameworks (WireMock, MockServer, Mountebank) for simulating external dependencies
+Experience with security testing tools and OWASP principles (SAST, DAST, dependency scanning
+Understanding of observability and monitoring to correlate test results with production behavior (Splunk, Datadog, Grafana)
+Experience with database testing and data validation across relational (PostgreSQL, MySQL) and NoSQL (DynamoDB, MongoDB) databases
+
+ 

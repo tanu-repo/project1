@@ -4,9 +4,10 @@ export class ScheduleScanPage {
 
     }
     async selectState(page, stateName) {
-        await page.waitForTimeout(2000);
-        await this.page.getByRole('combobox').getByRole('img').click();
-        await this.page.locator(`//div[@role='combobox']//li//span[text()='${stateName}']`).click();
+        // wait for the combobox to be visible instead of an arbitrary timeout
+        await page.getByRole('combobox').waitFor({ state: 'visible', timeout: 5000 });
+        await page.getByRole('combobox').getByRole('img').click();
+        await page.locator(`//div[@role='combobox']//li//span[text()='${stateName}']`).click();
 
     }
     async selectIrvineLocation(page, locationName) {
@@ -26,13 +27,14 @@ export class ScheduleScanPage {
     }
 
     async addCard(page) {
-        await page.waitForTimeout(2000);
-        const frame = page.locator("//iframe[contains(@name,'__privateStripeFrame')]").nth(0).contentFrame();
+        // wait for stripe iframe input to be visible instead of a fixed timeout
+        const stripeFrameLocator = page.frameLocator("iframe[name*='__privateStripeFrame']");
+        await stripeFrameLocator.locator('#payment-numberInput').waitFor({ state: 'visible', timeout: 7000 });
 
-        await frame.locator('#payment-numberInput').fill('4242424242424242');
-        await frame.locator('#payment-expiryInput').fill('12/34');
-        await frame.locator('#payment-cvcInput').fill('123');
-        await frame.locator('#payment-postalCodeInput').fill('95634');
+        await stripeFrameLocator.locator('#payment-numberInput').fill('4242424242424242');
+        await stripeFrameLocator.locator('#payment-expiryInput').fill('12/34');
+        await stripeFrameLocator.locator('#payment-cvcInput').fill('123');
+        await stripeFrameLocator.locator('#payment-postalCodeInput').fill('95634');
 
 
     }

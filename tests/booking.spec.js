@@ -5,7 +5,7 @@ import { SelectPlan } from '../page/selectPlanPage';
 import { ScheduleScanPage } from '../page/scheduleScanPage';
 
 
-test.describe('Login Tests', () => {
+test.describe('Booking Tests', () => {
 
     test.beforeEach(async ({ page }) => {
         const login = new LoginPage(page);
@@ -17,7 +17,6 @@ test.describe('Login Tests', () => {
     });
 
     test('validate user can schedule a MRI scan', async ({ page }) => {
-        test.setTimeout(60000);
         const homePage = new HomePage(page);
         const selectPlanPage = new SelectPlan(page);
         const scheduleScanPage = new ScheduleScanPage(page);
