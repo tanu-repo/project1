@@ -1,3 +1,5 @@
+import { generateRobustEmail, generateUSPhone, generateRandomName } from '../util/utils';
+
 export class LoginPage {
     constructor(page) {
         this.page = page;
@@ -17,10 +19,10 @@ export class LoginPage {
 
     async createNewUser() {
         await this.joinInput.click();
-        await this.legalFirstNameInput.fill(await this.generateRandomName());
-        await this.legalLastNameInput.fill(await this.generateRandomName());
-        await this.emailJoinInput.fill(await this.generateRobustEmail());
-        await this.phoneJoinInput.fill(await this.generateUSPhone());
+        await this.legalFirstNameInput.fill(generateRandomName());
+        await this.legalLastNameInput.fill(generateRandomName());
+        await this.emailJoinInput.fill(generateRobustEmail());
+        await this.phoneJoinInput.fill(generateUSPhone());
         await this.passwordJoinInput.fill(process.env.E2E_STAGING_TESTING_PASSWORD);
         await this.ezraAgreementCheckbox.click();
         await this.submitJoinButton.click();
@@ -72,31 +74,7 @@ export class LoginPage {
         await this.signOutButton.click();
     }
 
-    async generateRobustEmail(prefix = "testuser", domain = "spohn.co") {
-        const random = Math.random().toString(36).substring(2, 6);
-        const timestamp = Date.now();
-        return `${prefix}+${random}${timestamp}@${domain}`;
-    }
-    async generateUSPhone() {
-        const random = (min, max) =>
-            Math.floor(Math.random() * (max - min + 1)) + min;
-
-        const areaCode = random(200, 999);
-        const centralOffice = random(200, 999);
-        const lineNumber = random(0, 9999);
-
-        return `(${areaCode}) ${centralOffice}-${String(lineNumber).padStart(4, '0')}`;
-    }
-
-    async generateRandomName() {
-        const prefixes = ["Al", "Jo", "Mi", "Da", "Ka", "El", "Sa", "Ro"];
-        const suffixes = ["son", "a", "ie", "an", "er", "y", "ah", "en"];
-
-        const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
-        const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
-
-        return prefix + suffix;
-    }
+    // Utility functions moved to `util/utils.js`
 
 }
 

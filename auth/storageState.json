@@ -1,0 +1,81 @@
+{
+  "cookies": [
+    {
+      "name": "csrf_token",
+      "value": "c1e098c1-9b93-45bb-a2a2-fa62db47a931",
+      "domain": "myezra-staging.ezra.com",
+      "path": "/",
+      "expires": 1778020574,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "g_state",
+      "value": "{\"i_l\":0,\"i_ll\":1775428574790,\"i_b\":\"aOpoYjhgKFPFo3pAVHFjUZC8Yjplrkxktcz/tw4pHhc\",\"i_e\":{\"enable_itp_optimization\":0}}",
+      "domain": "myezra-staging.ezra.com",
+      "path": "/",
+      "expires": 1790980574,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "mp_fd238d10-c4a8-4b7b-b647-3737d3cd3c31_perfalytics",
+      "value": "eJytkEFOxDAMRa%2BCIpYE2UlcJ%2Bw5R5UmDhoJFWjLbEa9Ow4syiDNjtW3ne%2Fnr1zM%2BGKe7gymSq1kFJIwFQtArk1evAvEFC220AL7bAUBwB7uhs08mLH9A0N%2BGAwREqfwiMwUXNRdfT2t42neZJnza7dBX5i1OkxArLN6FSQl5VULkgfnJZMME%2FnbSVJ2wfmO%2FlDMtnyKlku%2FonpWvZiyLd86rjLX57PMm7a872p4O3ZyT3FfT4uUreOmP325Spk9ugEtRGnsMQ9TYcabIXNASrVT3o%2BD6%2B%2BvCDHS%2FgU8WHx1",
+      "domain": ".ezra.com",
+      "path": "/",
+      "expires": 1806964575,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://myezra-staging.ezra.com",
+      "localStorage": [
+        {
+          "name": "lastActionTime",
+          "value": "1775428575019"
+        },
+        {
+          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.reclaimStart",
+          "value": "null"
+        },
+        {
+          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.ack",
+          "value": "1775428574866"
+        },
+        {
+          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.queue",
+          "value": "[]"
+        },
+        {
+          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.inProgress",
+          "value": "{}"
+        },
+        {
+          "name": "mp_eventQueue",
+          "value": "eJyrrgUAAXUA+Q=="
+        },
+        {
+          "name": "ld:68f9070b99716309b2fd544b:$diagnostics",
+          "value": "{\"dataSinceDate\":1775428574017,\"droppedEvents\":0,\"eventsInLastBatch\":0,\"streamInits\":[]}"
+        },
+        {
+          "name": "TERMLY_API_CACHE",
+          "value": "{\"TERMLY_STATISTIC\":{\"createdAt\":1775428573994,\"value\":\"__tltpl_46baf074-d54f-4e27-8971-48747b8f8189\"},\"__tltpl_46baf074-d54f-4e27-8971-48747b8f8189\":{\"createdAt\":1775428573994,\"value\":{\"51ab7bb8-74f0-4f29-9b2e-f9ccf6bc54f7\":{\"notify\":true,\"version\":21,\"showBanner\":true}}}}"
+        },
+        {
+          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.reclaimEnd",
+          "value": "null"
+        },
+        {
+          "name": "debug",
+          "value": "undefined"
+        }
+      ]
+    }
+  ]
+}
