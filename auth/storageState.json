@@ -1,31 +1,43 @@
 {
   "cookies": [
     {
-      "name": "csrf_token",
-      "value": "c1e098c1-9b93-45bb-a2a2-fa62db47a931",
-      "domain": "myezra-staging.ezra.com",
+      "name": "_cfuvid",
+      "value": "yfgFRSOYRG.VkEKZnNtIt1kSEsCqNFHnTZpkuAXSwA8-1775620540333-0.0.1.1-604800000",
+      "domain": ".app.termly.io",
       "path": "/",
-      "expires": 1778020574,
-      "httpOnly": false,
+      "expires": -1,
+      "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "g_state",
-      "value": "{\"i_l\":0,\"i_ll\":1775428574790,\"i_b\":\"aOpoYjhgKFPFo3pAVHFjUZC8Yjplrkxktcz/tw4pHhc\",\"i_e\":{\"enable_itp_optimization\":0}}",
+      "name": "csrf_token",
+      "value": "c066e58e-2e7a-4e16-8bfc-ba5ad787b261",
       "domain": "myezra-staging.ezra.com",
       "path": "/",
-      "expires": 1790980574,
+      "expires": 1778212540,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax",
+      "partitionKey": "https://ezra.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "g_state",
+      "value": "{\"i_l\":0,\"i_ll\":1775620541179,\"i_b\":\"nwdwC+oqgq2T4fF/VqQH0N4bN+ISG/sIBbKDp2kRYxs\",\"i_e\":{\"enable_itp_optimization\":0}}",
+      "domain": "myezra-staging.ezra.com",
+      "path": "/",
+      "expires": 1791172541,
       "httpOnly": false,
       "secure": false,
-      "sameSite": "None"
+      "sameSite": "Lax"
     },
     {
       "name": "mp_fd238d10-c4a8-4b7b-b647-3737d3cd3c31_perfalytics",
-      "value": "eJytkEFOxDAMRa%2BCIpYE2UlcJ%2Bw5R5UmDhoJFWjLbEa9Ow4syiDNjtW3ne%2Fnr1zM%2BGKe7gymSq1kFJIwFQtArk1evAvEFC220AL7bAUBwB7uhs08mLH9A0N%2BGAwREqfwiMwUXNRdfT2t42neZJnza7dBX5i1OkxArLN6FSQl5VULkgfnJZMME%2FnbSVJ2wfmO%2FlDMtnyKlku%2FonpWvZiyLd86rjLX57PMm7a872p4O3ZyT3FfT4uUreOmP325Spk9ugEtRGnsMQ9TYcabIXNASrVT3o%2BD6%2B%2BvCDHS%2FgU8WHx1",
+      "value": "eJytkE1OxDAMha%2BCIpYU2XHSuOw5R5UfB1VChWnLbEa9O85sqiLNjtWznefnT7mZ8cO8PRkcSp8ouQQRgTsgjBVdEShUtEcOGdmGThAAusOdrICYFzPWf0mRewr5PjAx21cMwfcWvEN9ndZxmjdZ5vjZbNAWZq0OkyXWWTmjCNagLANkGYpzDMNjkEo25ZZ70Yxt%2BREtl3ZC9ap6M3lb7jquMpf3q8ybtm7f1fB17MSG8FymRfLW4tKfPp8QMXFRwjhw4kpSPXp6yIiZHLkW8n3cW8%2FfgLT%2FAnh5ecA%3D",
       "domain": ".ezra.com",
       "path": "/",
-      "expires": 1806964575,
+      "expires": 1807156541,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
@@ -37,22 +49,18 @@
       "localStorage": [
         {
           "name": "lastActionTime",
-          "value": "1775428575019"
+          "value": "1775620541126"
         },
         {
-          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.reclaimStart",
+          "name": "send_to_fp.0b09c2ee-3431-4636-8d8c-2e78a2649e64.ack",
+          "value": "1775620541197"
+        },
+        {
+          "name": "send_to_fp.0b09c2ee-3431-4636-8d8c-2e78a2649e64.reclaimStart",
           "value": "null"
         },
         {
-          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.ack",
-          "value": "1775428574866"
-        },
-        {
-          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.queue",
-          "value": "[]"
-        },
-        {
-          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.inProgress",
+          "name": "send_to_fp.0b09c2ee-3431-4636-8d8c-2e78a2649e64.inProgress",
           "value": "{}"
         },
         {
@@ -61,19 +69,23 @@
         },
         {
           "name": "ld:68f9070b99716309b2fd544b:$diagnostics",
-          "value": "{\"dataSinceDate\":1775428574017,\"droppedEvents\":0,\"eventsInLastBatch\":0,\"streamInits\":[]}"
+          "value": "{\"dataSinceDate\":1775620540612,\"droppedEvents\":0,\"eventsInLastBatch\":0,\"streamInits\":[]}"
         },
         {
-          "name": "TERMLY_API_CACHE",
-          "value": "{\"TERMLY_STATISTIC\":{\"createdAt\":1775428573994,\"value\":\"__tltpl_46baf074-d54f-4e27-8971-48747b8f8189\"},\"__tltpl_46baf074-d54f-4e27-8971-48747b8f8189\":{\"createdAt\":1775428573994,\"value\":{\"51ab7bb8-74f0-4f29-9b2e-f9ccf6bc54f7\":{\"notify\":true,\"version\":21,\"showBanner\":true}}}}"
+          "name": "send_to_fp.0b09c2ee-3431-4636-8d8c-2e78a2649e64.queue",
+          "value": "[]"
         },
         {
-          "name": "send_to_fp.305e5127-8785-4162-9b49-124e12f59700.reclaimEnd",
+          "name": "send_to_fp.0b09c2ee-3431-4636-8d8c-2e78a2649e64.reclaimEnd",
           "value": "null"
         },
         {
           "name": "debug",
           "value": "undefined"
+        },
+        {
+          "name": "TERMLY_API_CACHE",
+          "value": "{\"TERMLY_STATISTIC\":{\"createdAt\":1775620540458,\"value\":\"__tltpl_46baf074-d54f-4e27-8971-48747b8f8189\"},\"__tltpl_46baf074-d54f-4e27-8971-48747b8f8189\":{\"createdAt\":1775620540458,\"value\":{\"51ab7bb8-74f0-4f29-9b2e-f9ccf6bc54f7\":{\"notify\":true,\"version\":21,\"showBanner\":true}}},\"__tltpl_3436642\":{\"createdAt\":1775620541245,\"value\":{\"51ab7bb8-74f0-4f29-9b2e-f9ccf6bc54f7\":{\"notify\":true,\"version\":21,\"showBanner\":false}}}}"
         }
       ]
     }

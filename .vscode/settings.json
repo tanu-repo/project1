@@ -1,0 +1,23 @@
+{
+  "cody.experimental.mcp": true,
+  "[mcp]": {
+    "enable": true
+  },
+  "mcp": {
+    "servers": {
+      "playwright": {
+        "command": "npx",
+        "args": [
+          "@playwright/mcp@latest"
+        ],
+        "env": {
+          "TEST_ENV": "stage",
+          "BASE_URL": "https://myezra-staging.ezra.com",
+          "E2E_STAGING_TESTING_EMAIL": "e2euatstaging@spohn.co",
+          "E2E_STAGING_TESTING_PASSWORD": "Peacock2025!"
+        },
+        "disabled": false
+      }
+    }
+  }
+}

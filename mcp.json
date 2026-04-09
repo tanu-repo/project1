@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "env": {
+        "TEST_ENV": "stage",
+        "BASE_URL": "${BASE_URL}",
+        "E2E_STAGING_TESTING_EMAIL": "${E2E_STAGING_TESTING_EMAIL}",
+        "E2E_STAGING_TESTING_PASSWORD": "${E2E_STAGING_TESTING_PASSWORD}"
+      },
+      "disabled": false,
+      "timeout": 30000,
+      "description": "Playwright MCP server for E2E test automation"
+    }
+  },
+  "settings": {
+    "project": "Ezra E2E Automation - Playwright",
+    "description": "Playwright test automation framework with multi-browser support, storage state auth, and centralized utilities",
+    "baseDir": "./",
+    "testDir": "./tests",
+    "configFile": "playwright.config.js",
+    "playlistDir": "./test-results",
+    "browsers": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "storageStatePath": "auth/storageState.json",
+    "authSetupTest": "tests/auth.saveStorageState.spec.js"
+  }
+}
