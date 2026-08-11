@@ -11,17 +11,12 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
-        stage('Verify Node') {
+        stage('Verify Environment') {
             steps {
                 sh '''
                     node --version
                     npm --version
+                    git --version
                 '''
             }
         }
@@ -49,10 +44,6 @@ pipeline {
         always {
             archiveArtifacts artifacts: 'playwright-report/**/*, test-results/**/*',
                              allowEmptyArchive: true
-        }
-
-        failure {
-            echo 'Playwright tests failed. Check the test report and artifacts.'
         }
     }
 }
