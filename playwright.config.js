@@ -25,7 +25,7 @@ export default defineConfig({
   use: {
     baseURL: process.env.BASE_URL,
     // Run headless in CI; locally preserve user's default (false by default unless CI is set)
-    headless: !!process.env.CI,
+    headless: process.env.CI ? true : false,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
