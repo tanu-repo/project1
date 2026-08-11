@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS'
+    }
+
     environment {
         CI = 'true'
     }
@@ -45,10 +49,6 @@ pipeline {
         always {
             archiveArtifacts artifacts: 'playwright-report/**/*, test-results/**/*',
                              allowEmptyArchive: true
-        }
-
-        success {
-            echo 'Playwright tests passed.'
         }
 
         failure {
