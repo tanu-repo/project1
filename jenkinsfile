@@ -27,15 +27,15 @@ pipeline {
             }
         }
 
-        stage('Install Playwright Browsers') {
+        stage('Install Playwright Browser') {
             steps {
-                sh 'npx playwright install chromium firefox'
+                sh 'npx playwright install chromium'
             }
         }
 
         stage('Run Playwright Tests') {
             steps {
-                sh 'npm test'
+                sh 'npm run test:e2e'
             }
         }
     }
@@ -44,6 +44,14 @@ pipeline {
         always {
             archiveArtifacts artifacts: 'playwright-report/**/*, test-results/**/*',
                              allowEmptyArchive: true
+        }
+
+        success {
+            echo 'Playwright tests passed.'
+        }
+
+        failure {
+            echo 'Playwright tests failed.'
         }
     }
 }
